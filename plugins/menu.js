@@ -24,28 +24,16 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─━━━❰ 𝐀𝐑𝐂𝐓𝐈𝐗 𝐁𝐎𝐓 𝐈𝐍𝐂❱
-┃ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝐀𝐑𝐂𝐓𝐈𝐗 𝐁𝐎𝐓
+╭─━━━❰ 𓆩𓆩𝐋𝐄𝐌𝐥𝐑𓆲⁶⁶لمـيــــر𓆪𓆪❱
+┃ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𓆩𓆩𝐋𝐄𝐌𝐥𝐑𓆲⁶⁶لمـيــــر𓆪𓆪
 ┖━━━━━━━━━━━━━━━⦂
 
-╭━━━━❰ 𝗨𝗦𝗘𝗥 ❱
-┃ 🗿 𝗟𝗜𝗠𝗜𝗧 : *%limit Limit*
-┃ 🗿 𝗥𝗢𝗟𝗘 : *%role*
-┃ 🗿 𝗟𝗘𝗩𝗘𝗟 : *%level (%exp / %maxexp)*
-┃ 🗿 𝗧𝗢𝗧𝗔𝗟 𝗫𝗣 : %totalexp ✨
-┃ 
-┃ 🌍 𝗗𝗔𝗧𝗘: *%date*
-┃ 🌍 𝗧𝗜𝗠𝗘: *%time*
-┃
-┃ 🎲 𝗨𝗣𝗧𝗜𝗠𝗘: *%uptime (%muptime)*
-┃ 🎲 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘: %rtotalreg of %totalreg
-┗━━━━━━━━━━━━━━━━⦂
 %readmore`.trimStart(),
   header: '╭━━━❰ %category ❱',
   body: '┃ ⚜️ %cmd %islimit %isPremium',
   footer: '╰━━━━━━━⦂\n',
   after: `
-𝐀𝐑𝐂𝐓𝐈𝐗 𝐁𝐎𝐓 𝐈𝐍𝐂 |©𝐒𝐢𝐛𝐬𝐬𝐬𝐬𝐬𝐬𝐬𝐬
+المطور : 𝐋𝐄𝐌𝐥𝐑
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
@@ -147,7 +135,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     const pp = await conn.profilePictureUrl(conn.user.jid, 'image').catch(_ => './media/arctix.jpg')
-    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://www.instagram.com/sibssssssss', 'INSTAGRAM', owner[0][0], 'OWNER', [
+    conn.sendHydrated(m.chat, text.trim(), author, pp, 'https://www.instagram.com/vanitasx_d', 'INSTAGRAM', owner[0][0], 'OWNER', [
       ['BOTGROUP', '/donasi'],
       ['SPEED', '/ping'],
       ['OWNER', '/owner']
